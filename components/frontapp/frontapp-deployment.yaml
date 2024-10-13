@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontapp
+  labels:
+    app: frontapp
+    training: block4
+    optional: frontapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontapp
+      training: block4
+      optional: frontapp
+  template:
+    metadata:
+      labels:
+        app: frontapp
+        training: block4
+        optional: frontapp
+    spec:
+      containers:
+      - name: frontapp
+        image: quay.io/drsylent/cubix/block3/homework-frontapp:springboot3
+        ports:
+        - containerPort: 8080
+          name: web
