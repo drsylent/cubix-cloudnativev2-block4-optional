@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: frontapp
-        image: quay.io/drsylent/cubix/block3/homework-frontapp:springboot3
+        image: quay.io/drsylent/cubix/block3/homework-frontapp:springboot4
         ports:
         - containerPort: 8080
           name: web
